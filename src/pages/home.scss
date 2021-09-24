@@ -14,7 +14,8 @@
     width: px(2420);
     margin: 0 auto;
   }
-  > footer{
+
+  > footer {
     height: px(68);
     border: 1px solid #0d2d59;
     margin: px(20) 0 1px;
@@ -96,7 +97,7 @@
       grid-area: box5;
     }
 
-    .管辖统计,.破获排名,.发案趋势,.案发时段,.战果,.籍贯,.年龄段 {
+    .管辖统计, .破获排名, .发案趋势, .案发时段, .战果, .籍贯, .年龄段 {
       height: px(316);
       display: flex;
       flex-direction: column;
@@ -118,94 +119,179 @@
         width: 100%;
       }
     }
-    .发案趋势,.案发时段 {
+
+    .发案趋势, .案发时段 {
       height: px(363);
     }
-    .年龄段 {display: flex;flex-direction: column;
+
+    .年龄段 {
+      display: flex;
+      flex-direction: column;
       height: px(363);
+
       > .charts {
-        width: 100%;flex: 1; border: 1px solid red;
-        display: flex; padding: px(30);
+        width: 100%;
+        flex: 1;
+        display: flex;
+        padding: px(30);
       }
+
       &-图1, &-图2, &-图3 {
         flex: 1;
-        border: 1px solid red;
-        display: flex; flex-direction: column;
+        display: flex;
+        flex-direction: column;
       }
-    }
-    .籍贯 {
-      height: px(753);
-      background: transparent;
-      > .wrapper {
-        position: relative;width: 100%;flex: 1;
-        display: flex; flex-direction: column;
-        .chart {flex: 1;}
+
+      &-图1, &-图2 {
         .legend {
-          position: absolute;top: px(40);left: px(20);display: flex;
+          height: px(40);
+          display: flex;
           align-items: center;
-          font-size: px(22); padding: px(20) px(10) px(20) 0;
-          border-radius: 0;
-          .icon {
-            margin: 0 px(10);
+          justify-content: center;
+          flex-wrap: wrap;
+
+          > span {
             display: inline-block;
             width: px(16);
-            height: px(16);
-            border-radius: 50%;
-            background: #1cecd9;
+            height: px(10);
+            border-radius: px(2);
+            margin: 0 px(10);
+          }
+
+          .male {
+            background: #33a4fa;
+          }
+
+          .female {
+            background: #8d70f8;
           }
         }
-        .notes{
-          position: absolute;
-          bottom: px(10);
-          right: px(10);
+
+        .chart {
+          position: relative;
+          display: flex;
+
+          > .main {
+            flex: 1;
+          }
+
+          > .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #33a4fa;
+            font-size: px(40);
+            text-shadow: 0 0 px(20) #33a4fa;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &-图2 {
+        width: px(290);
+        flex-shrink: 0;
+
+        .legend {
+          justify-content: flex-start;
         }
       }
     }
-    .战果 {
-      > table {
-        margin-top: px(38);
-        border-collapse: collapse;
-        th, td {
-          border: 1px solid #1a3671;
-        }
-        thead {
-          th {
-            height: px(70);
-            box-shadow: inset 0 0 px(60) 0 #1f3d85;
+
+      .籍贯 {
+        height: px(753);
+        background: transparent;
+
+        > .wrapper {
+          position: relative;
+          width: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          .chart {
+            flex: 1;
           }
-        }
-        tbody {
-          td {height: px(50); width: px(84);
-            background: #1c2456;
+
+          .legend {
+            position: absolute;
+            top: px(40);
+            left: px(20);
+            display: flex;
+            align-items: center;
+            font-size: px(22);
+            padding: px(20) px(10) px(20) 0;
+            border-radius: 0;
+
+            .icon {
+              margin: 0 px(10);
+              display: inline-block;
+              width: px(16);
+              height: px(16);
+              border-radius: 50%;
+              background: #1cecd9;
+            }
+          }
+
+          .notes {
+            position: absolute;
+            bottom: px(10);
+            right: px(10);
           }
         }
       }
-    }
 
-    .破获排名 {
-      height: px(423);
-      .legend {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        padding: 0 px(20) px(10);
+      .战果 {
+        > table {
+          margin-top: px(38);
+          border-collapse: collapse;
 
-        > .first, > .second {
-          display: inline-block;
-          width: px(18);
-          height: px(12);
-          margin: 0 px(10);
+          th, td {
+            border: 1px solid #1a3671;
+          }
+
+          thead {
+            th {
+              height: px(70);
+              box-shadow: inset 0 0 px(60) 0 #1f3d85;
+            }
+          }
+
+          tbody {
+            td {
+              height: px(50);
+              width: px(84);
+              background: #1c2456;
+            }
+          }
         }
+      }
 
-        .first {
-          background:  linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);;
-        }
+      .破获排名 {
+        height: px(423);
 
-        .second {
-          background:  linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);;
+        .legend {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 100%;
+          padding: 0 px(20) px(10);
+
+          > .first, > .second {
+            display: inline-block;
+            width: px(18);
+            height: px(12);
+            margin: 0 px(10);
+          }
+
+          .first {
+            background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);;
+          }
+
+          .second {
+            background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);;
+          }
         }
       }
     }
   }
-}
