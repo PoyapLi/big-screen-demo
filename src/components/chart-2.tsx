@@ -29,10 +29,10 @@ export const Chart2 = () =>{
                 {name:'某8公安局',2019:1000, 2020:Math.random()*1000},
                 {name:'某9公安局',2019:1100, 2020:Math.random()*1000},
             ];
-            x(newData)
+            updateChart2(newData)
         },1000)
     },[])
-    const x = (data)=>{
+    const updateChart2 = (data)=>{
         myChart.current.setOption(createEchartsOptions({
             xAxis: {
                 type:'value',
@@ -88,7 +88,7 @@ export const Chart2 = () =>{
     }
     useEffect(()=>{
         myChart.current = echarts.init(divRef.current)
-        x(data)
+        updateChart2(data)
     },[])
     return (
         <div className="bordered 破获排名">
