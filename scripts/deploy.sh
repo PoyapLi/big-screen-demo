@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 rm -rf dist &&
 yarn build &&
 cd dist &&
