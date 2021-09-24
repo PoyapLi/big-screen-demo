@@ -16,7 +16,7 @@ export const Home = () => {
                 <Chart2/>
             </section>
             <section className="bordered section2">
-
+                <Chart3/>
             </section>
             <section className="bordered section3">
 
