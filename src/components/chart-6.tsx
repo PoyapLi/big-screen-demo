@@ -75,9 +75,9 @@ export const Chart6 = () => {
             <div className="wrapper">
                 <div ref={divRef} className="chart"/>
                 <div className="legend bordered">
-                    <span className="icon" style={{background: colors['甘肃省']}}/>甘肃
-                    <span className="icon" style={{background: colors['四川省']}}/>四川
-                    <span className="icon" style={{background: colors['青海省']}}/>青海
+                    <span className="icon" style={{background: colors['甘肃省']}}/>开心籍
+                    <span className="icon" style={{background: colors['四川省']}}/>高兴籍
+                    <span className="icon" style={{background: colors['青海省']}}/>愉悦籍
                 </div>
                 <div className="notes">此地图仅为演示效果,籍贯分布地仅为演示并非真实数据</div>
             </div>
