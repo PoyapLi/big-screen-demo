@@ -1,7 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
-import {px} from '../shared/px';
-import {baseEchartOptions} from '../shared/base-echart-options';
 import {createEchartsOptions} from '../shared/create-echarts-options';
 
 export const Chart2 = () =>{
@@ -29,7 +27,7 @@ export const Chart2 = () =>{
                 {
                     name: '2020年',
                     type: 'bar',
-                    data: [3221, 1125, 3210, 3418, 1230, 1235, 4524, 2341, 1228],
+                    data: [300, 400, 500, 600, 700, 800, 900, 1000, 1100],
                     itemStyle:{
                         normal:{
                             color: new echarts.graphic.LinearGradient(0,0,1,0,[{
@@ -45,7 +43,7 @@ export const Chart2 = () =>{
                 {
                     name: '2021年',
                     type: 'bar',
-                    data: [1125, 3221, 3210, 1235, 3418, 2341, 1230, 1228, 4524],
+                    data: [200, 300, 400, 500, 600, 700, 800, 900, 1000],
                     itemStyle:{
                         normal:{
                             color: new echarts.graphic.LinearGradient(0,0,1,0,[{
@@ -66,8 +64,8 @@ export const Chart2 = () =>{
             <h2>案件破获排名</h2>
             <div ref={divRef} className="chart"/>
             <div className="legend">
-                <span className="first"/> 破案排名2021
-                <span className="second"/> 破案排名2020
+                <span className="first"/> 破案排名1
+                <span className="second"/> 破案排名2
             </div>
         </div>
     )
