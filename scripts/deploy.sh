@@ -1,7 +1,5 @@
-#!/usr/bin/env sh
-
 rm -rf dist &&
-yarn build &&
+yarn build --base ./ &&
 cd dist &&
 git init &&
 git add . &&

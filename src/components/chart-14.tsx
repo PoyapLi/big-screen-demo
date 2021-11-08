@@ -43,25 +43,11 @@ export const Chart14 = () => {
                 <td rowSpan={3}>扒窃</td>
                 <td>公交车扒窃</td>
                 <td>40</td>
-                <td rowSpan={3}>68</td>
+                <td rowSpan={3}>62</td>
             </tr>
             <tr>
                 <td>车站扒窃</td>
                 <td>22</td>
-            </tr>
-            <tr>
-                <td>街面扒窃</td>
-                <td>45</td>
-            </tr>
-            <tr>
-                <td rowSpan={2}>诈骗</td>
-                <td>甩票子诈骗</td>
-                <td>32</td>
-                <td rowSpan={2}>102</td>
-            </tr>
-            <tr>
-                <td>买手机诈骗</td>
-                <td>80</td>
             </tr>
             </tbody>
         </table>
